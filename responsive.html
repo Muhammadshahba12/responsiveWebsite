@@ -4,28 +4,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>starting to think responsively</title>
+<style>
+body{
+    font-size: 1.125rem;
+    color: #707070;
+    margin: 0;
+
+    background: pink;
+}
+
+/* from a minimum width of 650px and bigger */
+@media (min-width: 500px) and (orientation: landscape){
+    body{
+        background: orange;
+    }
+}
+
+/* from a minimum width of 650px and bigger
+@media (min-width: 650px){
+    body{
+        background: orange;
+    }
+} */
+
+/* from a minimum width of 400px upto a width of 649px
+@media (min-width: 400px) and (max-width: 649px){
+    body{
+        background: purple;
+    }
+} */
+
+/* Typography */
+ 
+h1{
+    font-size: 3rem;
+    color: #212614;
+    text-align: center;
+}
+
+h1 span{
+    color: #b7832f;
+}
+
+h2{
+    font-size: 1.5rem;
+}
+
+
+p{
+    margin-top: 0;
+}
+
+/* layout     */
+img{
+    width: 100%;
+}
+.container{
+    width: 95%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.columns{
+    display: flex;
+    margin:  1em 0;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+}
+
+.col-1{
+    width: 23%;
+}
+
+.col-2{
+    width: 46%;
+}
+
+.col-3{
+    width: 69%;
+}
+
+.col-bg{
+    background: #212614;
+    padding: 1em;
+
+    color: #fff;
+}
+
+@media (max-width: 600px){
+    .columns{
+        flex-direction: column;
+    }
+    
+    .col-1,
+    .col-2,
+    .col-3{
+        width: 100%;
+    }
+}
+
+</style>    
 </head>
 <body>
     <div class="container">
-         <h1>Let's start getting a little more fancy!</h1>
+         <h1>Let's start <span>getting a little</span> more fancy!</h1>
          <img src="images/ele1.png" alt="">
 
          <div class="columns">
-               <div class="col">
+               <div class="col col-1">
                      <h2>Dolor sit</h2>
                      <p>Lorem Ipsum is simply dummy text of the printing
                          and typesetting industry. Lorem Ipsum has been 
                          the industry's standard dummy text ever since 
                          the 1500s, when an unknown printer took a galley
                          of type and scrambled it to make a type specimen book.
-                         It has survived not only five centuries, but also the 
-                         leap into electronic typesetting, remaining essentially 
-                         unchanged. It was popularised in the 1960s with the
-                         release of Letraset sheets containing Lorem Ipsum
                          passages, and more recently with desktop publishing 
                          software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                </div>
-               <div class="col">
+               <div class="col col-2">
                      <h2>Consectetur adipising</h2>
                      <p>Lorem Ipsum is simply dummy text of the printing
                         and typesetting industry. Lorem Ipsum has been 
@@ -51,23 +148,18 @@
                             passages, and more recently with desktop publishing 
                             software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                </div>
-               <div class="col">
+               <div class="col col-1 col-bg">
                      <p>Lorem Ipsum is simply dummy text of the printing
                          and typesetting industry. Lorem Ipsum has been 
                          the industry's standard dummy text ever since 
                          the 1500s, when an unknown printer took a galley
                          of type and scrambled it to make a type specimen book.
-                         It has survived not only five centuries, but also the 
-                         leap into electronic typesetting, remaining essentially 
-                         unchanged. It was popularised in the 1960s with the
-                         release of Letraset sheets containing Lorem Ipsum
-                         passages, and more recently with desktop publishing 
                          software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                </div>
          </div>
 
          <div class="columns">
-               <div class="col">
+               <div class="col col-3">
                      <h2>Deserunt mollit anim id est laborum </h2>
                      <p>Lorem Ipsum is simply dummy text of the printing
                         and typesetting industry. Lorem Ipsum has been 
@@ -81,7 +173,7 @@
                         passages, and more recently with desktop publishing 
                         software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                </div>
-               <div class="col">
+               <div class="col col-1 col-bg">
                 <p>Lorem Ipsum is simply dummy text of the printing
                     and typesetting industry. Lorem Ipsum has been 
                     the industry's standard dummy text ever since 
