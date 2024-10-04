@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+body{
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* ==================
+ Typography
+==================*/
+
+h1{
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    color: #143774;
+    font-size:  2rem;
+    margin: 0;
+}
+
+.subtitle{
+    font-weight: 700;
+    color: #1792d2;
+    font-size:  0.75rem;
+    margin: 0;
+}
+
+/* ==================
+ Layout
+==================*/
+
+.container{
+    width: 90%;
+    max-width: 900px;
+    border:  1px solid magenta;
+    margin: 0 auto;
+}
+
+ /* newly added */
+.container-nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+header{
+    /* text-align: center; */
+    /* background: pink; */
+    padding: 2em 0;
+} 
+
+@media (max-width: 675px){
+    .container-nav{
+        flex-direction: column;
+    }
+
+    header{
+        text-align: center;
+    }
+}
+
+/* navigation */
+
+nav ul{
+    /* border: 1px solid magenta; */
+
+    list-style: none;
+    display: flex;
+    padding: 0;
+    justify-content: center;
+
+    /* width:545px */
+    /* justify-content: space-between; */
+}        
+nav li{
+    /* border: 1px solid orange; */
+    /* margin: 0 1rem; */
+
+    /* newly added */
+    margin-left: 2rem; 
+} 
+
+nav a{
+    /* border: 1px solid green; */
+
+    text-decoration: none;
+    color: #707070;
+    font-weight: 700;
+
+    padding: .25em 0;
+} 
+
+nav a:hover,
+nav a:focus{
+    color: #1792d2;
+} 
+
+.current-page{
+    border-bottom: 1px solid #707070;
+}
+
+.current-page:hover{
+    color: #707070;
+}
+
+@media (max-width: 675px){
+    nav ul{
+        flex-direction: column;
+    }
+
+    nav li{
+        margin: .5rem 0;
+    }
+}
+
+    </style>
+</head>
+<body>
+   <header>
+       <div class="container container-nav">
+            <div class="site-title">
+                <h1>Living the social life</h1>
+                <p class="subtitle">A blog exploring minimalism in life</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="current-page">Home</a></li>
+                    <li><a href="#">About me</a></li>
+                    <li><a href="#">Recent posts</a></li>
+                </ul>
+            </nav>
+       </div> <!-- .container -->
+   </header>
+</body>
+</html> 
